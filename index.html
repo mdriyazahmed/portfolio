@@ -16,7 +16,6 @@
   </style>
 </head>
 <body class="bg-white text-gray-900">
-  <!-- Navigation -->
   <nav class="fixed w-full bg-white/90 backdrop-blur-md z-50 shadow-sm">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <a href="#" class="text-2xl font-bold gradient-text">RA</a>
@@ -33,15 +32,14 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
   <section id="home" class="min-h-screen flex items-center pt-24" style="background: linear-gradient(135deg, #f5f7fa 0%, #e0e7ff 100%);">
     <div class="max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-2 gap-10 items-center">
       <div>
         <h1 class="text-4xl md:text-6xl font-bold mb-6">Hi, I'm <span class="gradient-text">Md Riyaz Ahmed</span></h1>
         <h2 class="text-2xl md:text-3xl text-gray-700 mb-6">SOC Analyst & Cybersecurity Enthusiast</h2>
         <p class="text-gray-600 mb-8 max-w-xl">
-          Dedicated to proactive monitoring, incident response, and continuous security improvement. Skilled with SIEM/EDR,
-          phishing investigations, and threat intelligence to reduce risk and strengthen defenses.
+          Proactive security monitoring, incident response, and continuous improvement. Skilled with SIEM/EDR,
+          phishing investigations, threat intelligence, and detection tuning to reduce risk and strengthen defenses.
         </p>
         <div class="flex gap-4">
           <a href="#projects" class="px-6 py-3 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition shadow-lg">View My Work</a>
@@ -52,32 +50,30 @@
         <div class="relative">
           <div class="absolute -inset-4 bg-gradient-to-r from-indigo-400 to-purple-500 rounded-full blur-lg opacity-75"></div>
           <div class="relative w-64 h-64 md:w-80 md:h-80 overflow-hidden rounded-full border-4 border-white shadow-xl">
-            <img src="https://avatars.githubusercontent.com/u/00000000" alt="Profile" class="w-full h-full object-cover">
+            <img alt="Profile" class="w-full h-full object-cover" />
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- About Section -->
   <section id="about" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-6">
       <h2 class="text-3xl font-bold mb-12 text-center gradient-text">About Me</h2>
       <div class="grid md:grid-cols-3 gap-10 items-start">
         <div class="md:col-span-1 flex justify-center">
           <div class="w-56 h-56 rounded-full overflow-hidden border-4 border-indigo-100 shadow-lg">
-            <img src="https://avatars.githubusercontent.com/u/00000000" alt="Profile" class="w-full h-full object-cover">
+            <img alt="Profile" class="w-full h-full object-cover" />
           </div>
         </div>
         <div class="md:col-span-2">
           <p class="text-gray-700 mb-4">
-            SOC Analyst with 3+ years of experience in 24x7 Security Operations: real-time monitoring, log analysis,
-            incident triage, and response across SIEM and EDR. I proactively tune detections, enrich investigations with
-            threat intel (VT, OTX, MITRE ATT&CK), and partner with stakeholders to improve security posture.
+            SOC Analyst with 3+ years in 24x7 Security Operations: real-time monitoring, log analysis, incident triage, and response across SIEM and EDR.
+            I proactively tune detections, enrich with threat intel (VirusTotal, AlienVault OTX, MITRE ATT&CK), and collaborate to improve security posture.
           </p>
           <p class="text-gray-700 mb-6">
-            Experienced across Splunk ES, QRadar, CrowdStrike Falcon, Proofpoint; comfortable with firewall/IDS, DNS
-            and proxy analysis. I document playbooks and SOPs, and drive awareness to reduce risk and MTTR.
+            Experienced with Splunk ES, IBM QRadar, CrowdStrike Falcon, Proofpoint; comfortable with firewall/IDS, DNS and proxy analysis.
+            I document playbooks and SOPs and drive user awareness to reduce MTTR and risk.
           </p>
           <div class="flex flex-wrap gap-6 text-sm">
             <div class="flex items-center"><i data-feather="map-pin" class="text-indigo-600 mr-2"></i>Hyderabad, India</div>
@@ -88,7 +84,6 @@
     </div>
   </section>
 
-  <!-- Skills Section -->
   <section id="skills" class="py-20 bg-gray-50">
     <div class="max-w-7xl mx-auto px-6">
       <h2 class="text-3xl font-bold mb-12 text-center gradient-text">Core Skills</h2>
@@ -120,7 +115,6 @@
     </div>
   </section>
 
-  <!-- Projects Section -->
   <section id="projects" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-6">
       <h2 class="text-3xl font-bold mb-12 text-center gradient-text">Security Projects & Initiatives</h2>
@@ -128,8 +122,7 @@
         <div class="project-card bg-white rounded-xl overflow-hidden shadow-md">
           <div class="p-6">
             <h3 class="text-xl font-semibold mb-2">Phishing Response Playbook</h3>
-            <p class="text-gray-600 mb-4">End-to-end SOP for phishing handling: header analysis, IOC enrichment (VT/OTX),
-              quarantine, and comms templates; reduced MTTR by 30%.</p>
+            <p class="text-gray-600 mb-4">End-to-end SOP for phishing handling: header analysis, IOC enrichment (VT/OTX), quarantine, comms templates; reduced MTTR by 30%.</p>
             <div class="flex flex-wrap gap-2 text-xs">
               <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full">SOP</span>
               <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full">MITRE ATT&CK</span>
@@ -140,8 +133,7 @@
         <div class="project-card bg-white rounded-xl overflow-hidden shadow-md">
           <div class="p-6">
             <h3 class="text-xl font-semibold mb-2">Splunk Use Case Tuning</h3>
-            <p class="text-gray-600 mb-4">Correlation rule optimization, new log onboarding, and KPI dashboards to
-              reduce false positives and improve coverage.</p>
+            <p class="text-gray-600 mb-4">Correlation rule optimization, new log onboarding, and KPI dashboards to reduce false positives and improve coverage.</p>
             <div class="flex flex-wrap gap-2 text-xs">
               <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full">Splunk ES</span>
               <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full">Detection Eng</span>
@@ -152,8 +144,7 @@
         <div class="project-card bg-white rounded-xl overflow-hidden shadow-md">
           <div class="p-6">
             <h3 class="text-xl font-semibold mb-2">EDR Alert Triage Framework</h3>
-            <p class="text-gray-600 mb-4">Triage matrix for CrowdStrike alerts with containment steps, SLA tiers,
-              and escalation paths; standardized shift operations.</p>
+            <p class="text-gray-600 mb-4">Triage matrix for CrowdStrike alerts with containment steps, SLA tiers, and escalation paths; standardized shift operations.</p>
             <div class="flex flex-wrap gap-2 text-xs">
               <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full">CrowdStrike</span>
               <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full">IR</span>
@@ -165,7 +156,6 @@
     </div>
   </section>
 
-  <!-- Experience Section -->
   <section id="experience" class="py-20 bg-gray-50">
     <div class="max-w-7xl mx-auto px-6">
       <h2 class="text-3xl font-bold mb-12 text-center gradient-text">Work Experience</h2>
@@ -192,7 +182,6 @@
     </div>
   </section>
 
-  <!-- Education Section -->
   <section id="education" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-6">
       <h2 class="text-3xl font-bold mb-12 text-center gradient-text">Education</h2>
@@ -216,7 +205,6 @@
     </div>
   </section>
 
-  <!-- Certifications Section -->
   <section id="certs" class="py-20 bg-gray-50">
     <div class="max-w-7xl mx-auto px-6">
       <h2 class="text-3xl font-bold mb-12 text-center gradient-text">Certifications</h2>
@@ -239,7 +227,6 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
   <section id="contact" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-6">
       <h2 class="text-3xl font-bold mb-12 text-center gradient-text">Get In Touch</h2>
@@ -247,4 +234,8 @@
         <div>
           <form class="space-y-6">
             <div>
-              <label for="name" class="block
+              <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+              <input id="name" name="name" type="text" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" />
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700">Email

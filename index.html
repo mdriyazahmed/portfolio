@@ -29,13 +29,17 @@
     }
     :root {
       --bg: #ffffff;
+      --text: #111827;
       --muted: #6b7280;
       --accent1: #3b82f6;
       --accent2: #8b5cf6;
     }
     [data-theme="dark"] {
       --bg: #0b1220;
+      --text: #e5e7eb;
       --muted: #9ca3af;
+      --accent1: #6366f1;
+      --accent2: #a855f7;
     }
     .gradient-text {
       background: linear-gradient(90deg, var(--accent1), var(--accent2));
@@ -106,7 +110,7 @@
         </h2>
         <p class="text-gray-700 dark:text-gray-400 mb-6">
           SOC Analyst with 3+ years of experience in proactive monitoring, log analysis, and incident response.
-          Skilled in Splunk, QRadar, CrowdStrike, and phishing investigation to enhance threat detection and response efficiency.
+          Skilled in Splunk, QRadar, and CrowdStrike to enhance threat detection and response efficiency.
         </p>
         <div class="flex flex-wrap justify-center md:justify-start gap-3">
           <a href="#projects" class="px-6 py-3 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700">View Work</a>
@@ -117,6 +121,7 @@
         </div>
       </div>
       <div class="flex justify-center md:justify-end" data-aos="fade-left">
+        <img src="/assets/profile.png" alt="Md Riyaz Ahmed" class="rounded-full w-56 h-56 md:w-72 md:h-72 object-cover shadow-xl border-4 border-white dark:border-gray-800" />
       </div>
     </div>
   </section>
@@ -127,10 +132,10 @@
       <h2 class="text-3xl font-bold mb-8 text-center gradient-text">About Me</h2>
       <p class="text-gray-700 dark:text-gray-300 mb-4 text-center max-w-3xl mx-auto">
         I’m a results-driven SOC Analyst with hands-on experience in 24x7 Security Operations—specializing in detection engineering, SIEM/EDR, and threat response.
-        I leverage Splunk ES, QRadar, and CrowdStrike Falcon to analyze incidents, tune detections, and strengthen organizational defenses.
+        I leverage Splunk ES, QRadar, and CrowdStrike Falcon to analyze incidents, tune detections, and strengthen defenses.
       </p>
       <p class="text-gray-700 dark:text-gray-300 text-center max-w-3xl mx-auto">
-        My focus lies in reducing false positives, enriching detections with threat intelligence, and enhancing response efficiency via MITRE ATT&CK, NIST CSF, and playbook automation.
+        My focus lies in reducing false positives, enriching detections with threat intelligence, and improving response efficiency via MITRE ATT&CK and NIST CSF.
       </p>
     </div>
   </section>
@@ -175,7 +180,7 @@
       <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         <div class="project-card bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md">
           <h3 class="font-semibold mb-2">Phishing Response Playbook</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-400">Developed automated SOP for phishing incident lifecycle — improved MTTR by 30%.</p>
+          <p class="text-sm text-gray-600 dark:text-gray-400">Developed SOP for phishing handling—reduced MTTR by 30%.</p>
         </div>
         <div class="project-card bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md">
           <h3 class="font-semibold mb-2">Splunk Use Case Optimization</h3>
@@ -183,7 +188,7 @@
         </div>
         <div class="project-card bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md">
           <h3 class="font-semibold mb-2">CrowdStrike Triage Framework</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-400">Standardized EDR alert triage matrix, reducing escalation delays by 25%.</p>
+          <p class="text-sm text-gray-600 dark:text-gray-400">Standardized EDR triage reducing escalation delays by 25%.</p>
         </div>
       </div>
     </div>
@@ -249,65 +254,79 @@
   <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
-    feather.replace();
-    AOS.init({ once: true, duration: 700 });
+  feather.replace();
+  AOS.init({ once: true, duration: 700 });
 
-    new Typed("#typed", {
-      strings: ["SOC Analyst", "Threat Hunter", "Incident Responder", "Cybersecurity Enthusiast"],
-      typeSpeed: 60, backSpeed: 30, loop: true
+  // Typed.js
+  new Typed("#typed", {
+    strings: ["SOC Analyst", "Threat Hunter", "Incident Responder", "Cybersecurity Enthusiast"],
+    typeSpeed: 60,
+    backSpeed: 30,
+    loop: true
+  });
+
+  // Vanta Globe initialization
+  let vantaInstance;
+  function initVanta() {
+    if (vantaInstance) vantaInstance.destroy();
+    vantaInstance = VANTA.GLOBE({
+      el: "#vanta-bg",
+      mouseControls: true,
+      touchControls: true,
+      minHeight: 200,
+      minWidth: 200,
+      scale: 0.6,
+      scaleMobile: 0.5,
+      size: 0.9,
+      color: 0x3b82f6,
+      color2: 0x8b5cf6,
+      backgroundColor: document.body.dataset.theme === "dark" ? 0x0b1220 : 0xffffff
     });
-
-    // Vanta Globe (mobile adaptive)
-    let vanta;
-    function initVanta() {
-      if (vanta) vanta.destroy();
-      vanta = VANTA.GLOBE({
-        el: "#vanta-bg",
-        mouseControls: true,
-        touchControls: true,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        scale: window.innerWidth < 640 ? 0.6 : 1.0,
-        color: 0x3b82f6,
-        color2: 0x8b5cf6,
-        backgroundColor: document.body.dataset.theme === "dark" ? 0x0b1220 : 0xffffff
-      });
-    }
-    initVanta();
-    window.addEventListener('resize', () => { initVanta(); });
-
-    // Theme toggle
-    const toggle = document.getElementById('themeToggle');
-    const body = document.body;
-    toggle.addEventListener('click', () => {
-      const current = body.getAttribute('data-theme');
-      const next = current === 'dark' ? 'light' : 'dark';
-      body.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
+  }
+  initVanta();
+  window.addEventListener('resize', () => {
+    // Debounce Vanta reinit to prevent excessive calls
+    clearTimeout(window.vantaResizeTimeout);
+    window.vantaResizeTimeout = setTimeout(() => {
       initVanta();
-    });
+    }, 250);
+  });
 
-    // Restore theme
-    const saved = localStorage.getItem('theme') || 'light';
-    body.setAttribute('data-theme', saved);
+  // Theme toggle
+  const themeToggle = document.getElementById('themeToggle');
+  const themeIcon = themeToggle.querySelector('i');
 
-    // Progress bar
-    window.addEventListener('scroll', () => {
-      const doc = document.documentElement;
-      const scrollTop = doc.scrollTop;
-      const height = doc.scrollHeight - doc.clientHeight;
-      const scrolled = (scrollTop / height) * 100;
-      document.getElementById('progress').style.width = scrolled + "%";
-    });
+  function setTheme(theme) {
+    document.body.dataset.theme = theme;
+    localStorage.setItem('theme', theme);
+    themeIcon.setAttribute('data-feather', theme === 'dark' ? 'sun' : 'moon');
+    feather.replace();
+    initVanta();
+  }
 
-    // Mobile menu
-    const mobileBtn = document.getElementById('mobileMenuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    mobileBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
+  themeToggle.addEventListener('click', () => {
+    setTheme(document.body.dataset.theme === 'light' ? 'dark' : 'light');
+  });
 
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+  // Load saved theme
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  setTheme(savedTheme);
+
+  // Mobile menu toggle
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  mobileMenuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  // Scroll progress bar
+  const progressBar = document.getElementById('progress');
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    progressBar.style.width = ((scrollTop / docHeight) * 100) + '%';
+  });
+
+  // Footer year update
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
